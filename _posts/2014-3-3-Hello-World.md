@@ -79,7 +79,7 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 
 1. In the Feature Extraction tab, copy and paste the url provided below and click `Extract`:
 
-		 `http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/`
+		 http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/
 
 2. The output will be shown in the screen for few second. The output will be in JSON format:
 	
@@ -147,7 +147,7 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 	
 4. In the Image Analysis Tab, Copy and Paste the url below and click Extract:
 
-			`http://s2.stabroeknews.com/images/2014/08/brad.jpg`
+			http://s2.stabroeknews.com/images/2014/08/brad.jpg
 
 5. The output will be shown in the screen for few second. The output will be in JSON format:
 
