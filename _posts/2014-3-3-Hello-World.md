@@ -1,8 +1,5 @@
 ---
 layout: post
-title: Alchemy API
+title: AlchemyAPI - Feature Extraction and Image Analysis
 ---
-
-
-[AlchemyAPI Tutorial] (string-args.github.io/alchemyapi)
 
