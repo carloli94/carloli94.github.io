@@ -8,7 +8,7 @@ Download PPT [here](https://www.github.com/string-args/MyAlchemyApps).
 
 [Alchemy API](http://www.alchemyapi.com/) helps developers and businesses build cognitive applications through text analysis and deep learning.
 
-In this tutorial, you will learn how to deploy a sample Alchemy API application to Bluemix. In addition, you will learn how to use the services offered by AlchemyAPI i.e. Alchemy Language and Alchemy Vision.
+In this tutorial, you will how to deploy a sample Alchemy API application to Bluemix. In addition, you will learn how to use the services offered by AlchemyAPI i.e. Alchemy Language and Alchemy Vision.
 
 #### Copy Sample Application
 
@@ -46,7 +46,7 @@ This tutorial will only cover the following functions of Alchemy Language - `Tit
 
 In order for the service to work, `Gradle` is required to solve the dependency management problem of the API. The following line of code is needed in the `build.gradle` file.
 
-> compile 'com.ibm.watson.developer_cloud:java-wrapper:1.1.0'
+		> compile 'com.ibm.watson.developer_cloud:java-wrapper:1.1.0'
 
 If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/Servlet`. This contains several java files including `FServlet.java` and `IServlet.java`.
 
@@ -54,7 +54,6 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 
 1. `FServlet.java` is the servlet class for Feature Extraction. The following imports are needed for the Alchemy Language function to work:
 > import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage; 
->
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle;
 > 
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors;
@@ -82,7 +81,17 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 	
 	> service.setApikey(" {api_key} ");
 
-    
+#### Run the Sample Application
+
+The web application is composed of two tabs: 1 for Feature Extraction and 1 for Image Analysis. It accepts URL input.
+
+1. In the Feature Extraction tab, copy and paste the url provided below and click `Extract`:
+
+ > http://blog.programmableweb.com/2011/09/16/new-api-billionaire-text-extractor-alchemy/
+
+2. The output will be shown in the screen for few second. The output will be in JSON format:
+
+
 
 	 
 	
