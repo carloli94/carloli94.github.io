@@ -15,7 +15,7 @@ In this tutorial, you will how to deploy a sample Alchemy API application to Blu
 You will download a copy of a sample application that you will deploy in your Bluemix Account.
 
 1. Create the directory `myalchemyapp` in the root directory. 
-2. Download [MyAlchemyApp.war](https://github.com/string-args/MyAlchemyApps) and save it in the `myalchemyapp` directory.
+2. Download [MyAlchemyApp.war](https://github.com/string-args/MyAlchemyApps/blob/master/build/libs/myalchemyapp.war) and save it in the `myalchemyapp` directory.
 
 #### Deploy Sample Application in Bluemix using the cf tool
 
