@@ -53,6 +53,7 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 #### Examine the Java classes
 
 1. `FServlet.java` is the servlet class for Feature Extraction. The following imports are needed for the Alchemy Language function to work:
+
 > import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage; 
 >
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle;
