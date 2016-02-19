@@ -98,6 +98,7 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 			"no", "label": "/sports/bobsled", "score": "0.393774" }, { "confident": "no", "label": "/health and
 			fitness/disorders/mental disorder/panic and anxiety", "score": "0.388495" } ]}
 		Sentiment:
+			{"docSentiment": { "mixed": "1", "score": "-0.329049", "type": "negative" }}
 		
 3. The output is only possible because of the functions in `FServlet.java`. Remember the ENDPOINT URLs of the functions above. They are used to generate the output of each function in JSON Format: 
 
@@ -123,6 +124,22 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 		URL language_url = new			
 		URL(LANGUAGE_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
 		reader = new BufferedReader(new InputStreamReader(language_url.openStream()));
+		while ((line = reader.readLine()) != null){
+			sb.append(line);
+		}
+		
+		Taxonomy:
+		URL taxonomy_url = new
+		URL(TAXONOMY_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
+		BufferedReader reader = new BufferedReader(new InputStreamReader(taxonomy_url.openStream()));
+		while ((line = reader.readLine()) != null){
+			sb.append(line);
+		}
+		
+		Sentiment:
+		URL sentiment_url = new
+		URL(SENTIMENT_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
+		reader = new BufferedReader(new InputStreamReader(sentiment_url.openStream()));
 		while ((line = reader.readLine()) != null){
 			sb.append(line);
 		}
@@ -158,7 +175,9 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 					}
 					
 
-7. Now you are free to try to enter an image link or a document link.
+8. The Face Recognition function generates the gender, the approximate age, and the name (if celebrity is detected) of the person detected in the image.
+
+9. You are now free to enter an image link or a document link. 
 
 #### Delete the Sample Application and the Alchemy API Service
 
