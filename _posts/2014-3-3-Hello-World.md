@@ -53,25 +53,24 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 #### Examine the Java classes
 
 1. `FServlet.java` is the servlet class for Feature Extraction. The following imports are needed for the Alchemy Language function to work:
+> import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage;
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle;
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors;
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.Language;
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.Taxonomies;
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment;
 
- > import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage;
- > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle;
- > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors;
- > import com.ibm.watson.developer_cloud.alchemy.v1.model.Language;
- > import com.ibm.watson.developer_cloud.alchemy.v1.model.Taxonomies;
- > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment;
 
 2.  `IServlet.java` is the servlet class for Image Analysis. The following imports are needed for the Alchemy Vision function to work:
+> import com.ibm.watson.developer_cloud.alchemy.v1AlchemyVision;
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.ImageFaces;
 	
- > import com.ibm.watson.developer_cloud.alchemy.v1AlchemyVision;
- > import com.ibm.watson.developer_cloud.alchemy.v1.model.ImageFaces;
 
 3. An API key is needed in order for the services of AlchemyAPI to work. This API key is already provided to you when you BIND the service in the sample application. And in this sample application, the api key is already extracted by a method in the `VCAP_SERVICES` as discussed in the previous lab. The following code demonstrates how the API key was used:
 
 	> AlchemyLanguage service = new AlchemyLanguage();
 	> service.setApiKey(" {api_key} ");
-	
-	
+		
 	> AlchemyVision service = new AlchemyVision();
 	> service.setApikey(" {api_key} ");
 
