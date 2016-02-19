@@ -53,19 +53,21 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 #### Examine the Java classes
 
 1. `FServlet.java` is the servlet class for Feature Extraction. The following imports are needed for the Alchemy Language function to work:
-
 > import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage; 
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle;
+> 
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors;
+>
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.Language;
+>
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.Taxonomies;
-> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment;
+>
+> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment; 
 
 
-2.  `IServlet.java` is the servlet class for Image Analysis. The following imports are needed for the Alchemy Vision function to work:
-
+2. `IServlet.java` is the servlet class for Image Analysis. The following imports are needed for the Alchemy Vision function to work:
 > import com.ibm.watson.developer_cloud.alchemy.v1AlchemyVision;
-
+> 
 > import com.ibm.watson.developer_cloud.alchemy.v1.model.ImageFaces;
 	
 
