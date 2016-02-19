@@ -65,8 +65,12 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 
 2. `IServlet.java` is the servlet class for Image Analysis. The following imports are needed for the Alchemy Vision function to work:
 
-	 import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyVision;
-	 import com.ibm.watson.developer_cloud.alchemy.v1.model.ImageFaces;
+	
+		
+		import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyVision;		
+		import com.ibm.watson.developer_cloud.alchemy.v1.model.ImageFaces;
+		 
+	
 	   
 3. An API key is needed in order for the services of AlchemyAPI to work. This API key is already provided to you when you BIND the service in the sample application. And in this sample application, the api key is already extracted by a method in the `VCAP_SERVICES` as discussed in the previous lab. The following code demonstrates how the API key was used:
 
