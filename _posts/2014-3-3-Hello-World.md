@@ -74,13 +74,10 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment; `
 
 3. An API key is needed in order for the services of AlchemyAPI to work. This API key is already provided to you when you BIND the service in the sample application. And in this sample application, the api key is already extracted by a method in the `VCAP_SERVICES` as discussed in the previous lab. The following code demonstrates how the API key was used:
 
-	> `AlchemyLanguage service = new AlchemyLanguage();`
-	> 
-	>` service.setApiKey(" {api_key} ");`
-	>
-	> `AlchemyVision service = new AlchemyVision();	`
-	> 
-        >` service.setApikey(" {api_key} ");`
+           AlchemyLanguage service = new AlchemyLanguage();
+           service.setApiKey(" {api_key} ");
+           AlchemyVision service = new AlchemyVision();
+           service.setApikey(" {api_key} ");`
 
 #### Run the Sample Application
 
