@@ -79,21 +79,27 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 
 1. In the Feature Extraction tab, copy and paste the url provided below and click `Extract`:
 
- `http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/`
+		 `http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/`
 
-2. The output will be shown in the screen for few second. The output will be in parsed format:
+2. The output will be shown in the screen for few second. The output will be in JSON format:
 	
 		Title:
-			UAAP: Lady Spikers rout Adamson in straight sets
+			 {"url": "http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/", "title": 
+			 "UAAP: Lady Spikers rout Adamson in straight sets"}
 		Author:
-		
+			 {"url": "http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/", "author":
+			 "Tinsel Joaquin"}
 		Language:
-			english
+			{"language": "english", "iso-639-1": "en", "iso-639-2": "eng", "iso-639-3": "eng", "ethnologue":
+			"http://www.ethnologue.com/show_language.asp?code=eng", "native-speakers": "309-400 million", "wikipedia": 
+			"http://en.wikipedia.org/wiki/English_language"}
 		Taxonomy:
-			
+			{"taxonomy": [ { "label": "/religion and spirituality/christianity", "score": "0.502526" }, { "confident":
+			"no", "label": "/sports/bobsled", "score": "0.393774" }, { "confident": "no", "label": "/health and
+			fitness/disorders/mental disorder/panic and anxiety", "score": "0.388495" } ]}
 		Sentiment:
 		
-3. The output above is only possible because of the functions in `FServlet.java`. Remember the ENDPOINT URLs of the functions above. They are used to generate the output of each function in JSON Format: 
+3. The output is only possible because of the functions in `FServlet.java`. Remember the ENDPOINT URLs of the functions above. They are used to generate the output of each function in JSON Format: 
 
 		Title:
 		URL title_url = new URL(TITLE_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
@@ -122,7 +128,46 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 		}
 	
 	
-4.
+4. In the Image Analysis Tab, Copy and Paste the url below and click Extract:
+
+			`http://s2.stabroeknews.com/images/2014/08/brad.jpg`
+
+5. The output will be shown in the screen for few second. The output will be in JSON format:
+
+			Face Recognition:
+				{"imageFaces": [ { "age": { "ageRange": "35-44", "score": "0.492583" }, "gender": { "gender":
+				"FEMALE", "score": "0.995504" }, "height": "428", "positionX": "518", "positionY": "274", "width":
+				"428" }, { "age": { "ageRange": "35-44", "score": "0.52164" }, "gender": { "gender": "MALE", "score":
+				"0.990048" }, "height": "386", "identity": { "disambiguated": { "dbpedia":
+				"http://dbpedia.org/resource/Brad_Pitt", "freebase": 
+				"http://rdf.freebase.com/ns/m.0c6qh", "musicBrainz":
+				"http://zitgist.com/music/artist/eaeceae0-98f7-4630-b8a0-df5083db4c9a", "name": "Brad Pitt",
+				"opencyc": "http://sw.opencyc.org/concept/Mx4rvchm5pwpEbGdrcN5Y29ycA", "subType": [ "Person", "Actor",
+				"MusicalArtist", "AwardNominee", "AwardWinner", "Celebrity", "FilmActor", "FilmProducer", "TVActor" ],
+				"yago": "http://yago-knowledge.org/resource/Brad_Pitt" }, "name": "Brad Pitt", "score": "0.956893" },
+				"positionX": "257", "positionY": "164", "width": "386" } ]}
+
+6. The output is only possible because of the functions in `IServlet.java`. Remember the ENDPOINT URLs of the functions above. They are used to generate the output of each function in JSON Format: 
+
+			Face Recognition:
+					URL face_url = new
+					URL(FACE_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
+					BufferedReader reader = new BufferedReader(new InputStreamReader(face_url.openStream()));
+					while ((line = reader.readLine()) != null){
+						sb.append(line);
+					}
+					
+
+7. Now you are free to try to enter an image link or a document link.
+
+#### Delete the Sample Application and the Alchemy API Service
+
+1. Go back to the browser tab containing your Bluemix account. In the menu, click `DASHBOARD`. 
+2. Click the `gear` icon in the widget of the sample application.
+3. Click the `Delete App` entry. In the `Services` tab, make sure that the PostgreSQL service is selected. In the `Routes` tab, make sure that the route (i.e., URL) is selected.
+4. Click the `DELETE` button.
+
+#### END OF TUTORIAL
 
 	 
 	
