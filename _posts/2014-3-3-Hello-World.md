@@ -45,10 +45,6 @@ You will download a copy of a sample application that you will deploy in your Bl
 
 This tutorial will only cover the following functions of Alchemy Language - `Title, Author, Language, Taxonomy, Sentiment` and of Alchemy Vision - `Face Recognition`.
 
-In order for the service to work, `Gradle` is required to solve the dependency management problem of the API. The following line of code is needed in the `build.gradle` file.
-
-	compile 'com.ibm.watson.developer_cloud:java-wrapper:1.1.0'
-
 If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/Servlet`. This contains several java files including `FServlet.java` and `IServlet.java`.
 
 #### Examine the Java classes
