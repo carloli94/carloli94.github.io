@@ -83,15 +83,15 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 
 2. The output will be shown in the screen for few second. The output will be in parsed format:
 	
-	Title:
+		Title:
+			UAAP: Lady Spikers rout Adamson in straight sets
+		Author:
 		
-	Author:
-		
-	Language:
-		
-	Taxonomy:
-		
-	Sentiment:
+		Language:
+			english
+		Taxonomy:
+			
+		Sentiment:
 		
 3. The output above is only possible because of the functions in `FServlet.java`. Remember the ENDPOINT URLs of the functions above. They are used to generate the output of each function in JSON Format: 
 
@@ -101,9 +101,25 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 		while ((line = reader.readLine()) != null){
 			sb.append(line);
 		}
-		*The above code below takes the ENDPOINT URL of the Title function added with the url inputted by the user, 
+		
+		*The above code takes the ENDPOINT URL of the Title function added with the url inputted by the user, 
 		the api key provided and the specifying that the output mode is in JSON Format. The output of the function 
 		is then read through line by line in the BufferedReader and appended to String Builder sb to produce the output.
+		
+		Author:
+		URL author_url = new URL(AUTHOR_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
+		reader = new BufferedReader(new InputStreamReader(author_url.openStream()));
+		while ((line = reader.readLine()) != null){
+			sb.append(line);
+		}
+		
+		Language:
+		URL language_url = new			
+		URL(LANGUAGE_ENDPOINT_URL+"?url="+input_url+"&apikey="+connector.getAPIKey()+"&outputMode=json");
+		reader = new BufferedReader(new InputStreamReader(language_url.openStream()));
+		while ((line = reader.readLine()) != null){
+			sb.append(line);
+		}
 	
 	
 4.
