@@ -83,10 +83,12 @@ The web application is composed of two tabs: 1 for Feature Extraction and 1 for 
 
 1. In the Feature Extraction tab, copy and paste the url provided below and click `Extract`:
 
- ` http://blog.programmableweb.com/2011/09/16/new-api-billionaire-text-extractor-alchemy/`
+ `http://thelasallian.com/2016/02/13/uaap-lady-spikers-rout-adamson-in-straight-sets/`
 
 2. The output will be shown in the screen for few second. The output will be in JSON format:
-
+	
+	Title:
+		
 
 
 	 
