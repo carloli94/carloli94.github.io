@@ -22,7 +22,7 @@ You will download a copy of a sample application that you will deploy in your Bl
 1. Open a terminal window and go to the `myalchemyapp` directory.
 2. Login to your Bluemix account using the cf tool. 
 
-	 > cf login -a https://api.ng.bluemix.net -s dev
+	> cf login -a https://api.ng.bluemix.net -s dev
 
 3. Upload the sample application to your Bluemix account.
 
@@ -46,7 +46,7 @@ This tutorial will only cover the following functions of Alchemy Language - `Tit
 
 In order for the service to work, `Gradle` is required to solve the dependency management problem of the API. The following line of code is needed in the `build.gradle` file.
 
-		> compile 'com.ibm.watson.developer_cloud:java-wrapper:1.1.0'
+	> compile 'com.ibm.watson.developer_cloud:java-wrapper:1.1.0'
 
 If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/Servlet`. This contains several java files including `FServlet.java` and `IServlet.java`.
 
@@ -54,17 +54,17 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 
 1. `FServlet.java` is the servlet class for Feature Extraction. The following imports are needed for the Alchemy Language function to work:
 
-	` import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage; `
-	
-	` import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle; `
-	
-	` import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors; `
-	
-	` import com.ibm.watson.developer_cloud.alchemy.v1.model.Language; `
-	
-	` import com.ibm.watson.developer_cloud.alchemy.v1.model.Taxonomies; `
-	
-	` import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment; `
+	> import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage; 
+	>
+	> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle; 
+	>
+	> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors; 
+	>
+	> import com.ibm.watson.developer_cloud.alchemy.v1.model.Language; 
+	>
+	> import com.ibm.watson.developer_cloud.alchemy.v1.model.Taxonomies; 
+	>
+	> import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment; 
 
 
 2. `IServlet.java` is the servlet class for Image Analysis. The following imports are needed for the Alchemy Vision function to work:
