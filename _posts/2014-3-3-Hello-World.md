@@ -37,6 +37,15 @@ You will download a copy of a sample application that you will deploy in your Bl
 2. Look for `AlchemyAPI` service and click it.
 3. In the `Service name` text box, type `alchemyapi-myservice`.
 4. Click the `CREATE` button.
+5. When asked to restage your application, click the `RESTAGE` button. Wait for your application to restage.
+6. Open another browser tab, and type in the url `myalchemyapp-< your_name>.mybluemix.net` to see if your application works.
+
+#### Analyze How the AlchemyAPI Service Works
+
+In order for the service to work, `Gradle` is required to solve the dependency management problem of the API. The following line of code is needed in the `build.gradle` file.
+
+	> compile 'com.ibm.watson.developer_cloud:java-wrapper:1.1.0'
+
 	 
 	
  
