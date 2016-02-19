@@ -53,33 +53,28 @@ If you extract `MyAlchemyApp.war` you will see the subdirectory `src/main/java/S
 
 #### Examine the Java classes
 
-1. `FServlet.java` is the servlet class for Feature Extraction. The following imports are needed for the Alchemy Language function to work:
+1. `FServlet.java` is the servlet class for Feature Extraction. Take note of the following ENDPOINT URLs, these ENDPOINTS URLs are used along with the input_url and the apikey to be able to get the output of the function.
 
          
-         import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyLanguage;
-         import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentTitle;
-         import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentAuthors;
-         import com.ibm.watson.developer_cloud.alchemy.v1.model.Language;
-         import com.ibm.watson.developer_cloud.alchemy.v1.model.Taxonomies;
-         import com.ibm.watson.developer_cloud.alchemy.v1.model.DocumentSentiment; 
+         Taxonomy: "http://gateway-a.watsonplatform.net/calls/url/URLGetRankedTaxonomy"
+         Language: "http://access.alchemyapi.com/calls/url/URLGetLanguage"
+         Authors: "http://gateway-a.watsonplatform.net/calls/url/URLGetAuthors"
+         Sentiment: "http://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment"
+         Title: "http://gateway-a.watsonplatform.net/calls/url/URLGetTitle"
          
 
-2. `IServlet.java` is the servlet class for Image Analysis. The following imports are needed for the Alchemy Vision function to work:
+2. `IServlet.java` is the servlet class for Image Analysis. Take note of the following ENDPOINT URLs, these ENDPOINTS URLs are used along with the input_url and the apikey to be able to get the output of the function.
 
-	
 		
-		import com.ibm.watson.developer_cloud.alchemy.v1.AlchemyVision;		
-		import com.ibm.watson.developer_cloud.alchemy.v1.model.ImageFaces;
+		Face Recognition: "http://gateway-a.watsonplatform.net/calls/url/URLGetRankedImageFaceTags"		
 		 
 	
 	   
-3. An API key is needed in order for the services of AlchemyAPI to work. This API key is already provided to you when you BIND the service in the sample application. And in this sample application, the api key is already extracted by a method in the `VCAP_SERVICES` as discussed in the previous lab. The following code demonstrates how the API key was used:
+3. An API key is needed in order for the services of AlchemyAPI to work. This API key is already provided to you when you BIND the service in the sample application and is extracted from the `VCAP_SERVICES`. 
 
           
-           AlchemyLanguage service = new AlchemyLanguage();
-           service.setApiKey(" {api_key} ");
-           AlchemyVision service = new AlchemyVision();
-           service.setApikey(" {api_key} ");
+           AlchemyConnector connector = new AlchemyConnector();
+           connector.getAPIKey();
            
 
 #### Run the Sample Application
