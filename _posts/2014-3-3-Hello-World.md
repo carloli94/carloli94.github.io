@@ -22,11 +22,12 @@ You will download a copy of a sample application that you will deploy in your Bl
 1. Open a terminal window and go to the `myalchemyapp` directory.
 2. Login to your Bluemix account using the cf tool. 
 
-    ` cf login -a https://api.ng.bluemix.net -s dev `
+		 cf login -a https://api.ng.bluemix.net -s dev  
 
 3. Upload the sample application to your Bluemix account.
 
-     ` cf push myalchemyapp-< your_name > -m 256M -p MyAlchemyApp.war`
+ 			
+		cf push myalchemyapp-< your_name > -m 256M -p MyAlchemyApp.war
 
 4. Go back to the browser tab containing your Bluemix account. In the menu, click `DASHBOARD`.
 5. Click the widget of your application to see its overview.
