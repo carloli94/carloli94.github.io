@@ -3,7 +3,6 @@ layout: post
 title: AlchemyAPI - Feature Extraction and Image Analysis
 ---
 Download PPT [here](https://www.github.com/string-args/MyAlchemyApps/raw/master/AlchemyAPI.pptx).
-
 Visit AlchemyApp Repository [here](https://github.com/string-args/myAlchemyApps).
 
 ### Application Development Tutorial
